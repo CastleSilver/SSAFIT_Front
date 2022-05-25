@@ -3,7 +3,7 @@
     <div>
       <v-app-bar flat style="background-color: #da0037">
         <a href="/" class="ssafit" style="font-family: KickerTrialBlack">
-          &nbsp;SSAFIT &nbsp;
+          SSAFIT &nbsp;
         </a>
         <v-spacer></v-spacer>
         <h6 class="mt-3">
