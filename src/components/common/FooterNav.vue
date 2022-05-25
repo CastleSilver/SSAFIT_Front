@@ -58,6 +58,7 @@ export default {
           "tweetPop",
           "width=486, height=286,scrollbars=yes"
         );
+<<<<<<< HEAD
       } else if (sns === "mdi-linkedin") {
         this.url =
           "http://www.linkedin.com/cws/share?url="+
@@ -80,6 +81,23 @@ export default {
     }
   }
 }
+=======
+      } else if (sns === "band") {
+        this.url =
+          "http://www.band.us/plugin/share?body=" +
+          encodeURIComponent(this.snsTitle) +
+          "&route=" +
+          encodeURIComponent(this.thisUrl);
+        window.open(
+          this.url,
+          "shareBand",
+          "width=400, height=500, resizable=yes"
+        );
+      }
+    },
+  },
+};
+>>>>>>> a24fe73865ee24465a110160857740d7b56586b5
 </script>
 <style scoped>
 .footer {
