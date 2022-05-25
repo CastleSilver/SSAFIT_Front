@@ -179,9 +179,9 @@ export default {
   color: black;
   margin: 20px 20px;
   padding-top: 30px;
-  font-weight: bold;
+  font-weight: bolder;
 
-  font-size: 25px;
+  font-size: 60px;
 }
 .router {
   color: black;
