@@ -7,6 +7,7 @@
         class="mx-4 white"
         style="margin-left: 10px"
         icon
+        @click="share(icon)" 
       >
         <v-icon size="30px">{{ icon }}</v-icon>
       </v-btn>
@@ -35,7 +36,26 @@ export default {
   name: "FooterNav",
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+    thisUrl: document.URL,
+    snsTitle: "운동 영상 관련 커뮤니티 SSAFIT",
+    url: "",
   }),
+  methods: {
+    share(sns){
+      if( sns === 'mdi-facebook' ) {
+        this.url = "http://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(this.thisUrl);
+        window.open(this.url, "", "width=486, height=286");
+      }
+      else if( sns === 'mdi-twitter' ) {
+        this.url= "http://twitter.com/share?url="+encodeURIComponent(this.thisUrl)+"&text="+encodeURIComponent(this.snsTitle);
+        window.open(this.url, "tweetPop", "width=486, height=286,scrollbars=yes");
+      }
+      else if( sns === 'band' ) {
+        this.url = "http://www.band.us/plugin/share?body="+encodeURIComponent(this.snsTitle)+"&route="+encodeURIComponent(this.thisUrl);
+        window.open(this.url, "shareBand", "width=400, height=500, resizable=yes");
+      } 
+    }
+  }
 };
 </script>
 <style scoped>
