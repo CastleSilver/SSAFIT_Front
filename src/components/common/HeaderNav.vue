@@ -1,14 +1,14 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar app flat style="background-color: #c20000">
-        <a href="/" class="ssafit"> &nbsp;SSAFIT &nbsp;</a>
+      <v-app-bar app flat style="background-color: #DA0037">
+        <a href="/" class="ssafit" style="font-family: KickerTrialBlack"> SSAFIT &nbsp;</a>
 
         <v-spacer></v-spacer>
         <v-btn to="/user/login" color="black" class="login"> Log In </v-btn>
       </v-app-bar>
 
-      <v-main class="main" style="background-color: #c20000">
+      <v-main class="main" style="background-color: #DA0037">
         <div style="margin: 20px">
           <v-row>
             <v-col cols="2" class="absolute1" style="width: 200px">
@@ -107,9 +107,9 @@ export default {
   color: black;
   margin: 20px 20px;
   padding-top: 30px;
-  font-weight: bold;
+  font-weight: bolder;
 
-  font-size: 25px;
+  font-size: 60px;
 }
 .router {
   color: black;

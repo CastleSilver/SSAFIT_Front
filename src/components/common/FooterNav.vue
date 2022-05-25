@@ -73,7 +73,7 @@ export default {
           encodeURIComponent(this.thisUrl);
         window.open(
           this.url,
-          "tweetPop",
+          "pinterest",
           "width=486, height=286,scrollbars=yes"
         );
       }
