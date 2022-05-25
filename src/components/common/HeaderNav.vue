@@ -2,7 +2,7 @@
   <v-app>
     <div>
       <v-app-bar app flat style="background-color: #da0037">
-        <a href="/" class="ssafit"> &nbsp;SSAFIT &nbsp;</a>
+        <a href="/" class="ssafit" style="font-family: KickerTrialBlack"> SSAFIT &nbsp;</a>
 
         <v-spacer></v-spacer>
         <v-btn to="/user/login" color="black" class="login"> Log In </v-btn>
@@ -107,9 +107,9 @@ export default {
   color: black;
   margin: 20px 20px;
   padding-top: 30px;
-  font-weight: bold;
+  font-weight: bolder;
 
-  font-size: 25px;
+  font-size: 60px;
 }
 .router {
   color: black;
