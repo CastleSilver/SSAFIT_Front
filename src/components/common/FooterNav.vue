@@ -83,7 +83,7 @@ export default {
 </script>
 <style scoped>
 .footer {
-  background-color: grey;
+  background-color: #da0037;
   color: white;
   text-align: center;
 }
