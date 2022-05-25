@@ -1,25 +1,16 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar app color="white" flat>
-        <a href="/" class="ssafit"> &nbsp;SSAFIT &nbsp; </a
-        ><img
-          style="width: 55px"
-          class="run"
-          src="https://img.icons8.com/stickers/100/000000/exercise-skin-type-1.png"
-        />
+      <v-app-bar flat style="background-color: #da0037">
+        <a href="/" class="ssafit"> &nbsp;SSAFIT &nbsp; </a>
         <v-spacer></v-spacer>
-        <h6 class="mt-3" style="margin: 10px 20px">
-          <img
-            style="width: 40px"
-            src="https://img.icons8.com/stickers/100/000000/teddy-bear.png"
-          />
+        <h6 class="mt-3">
           {{ userinfo.nickname }}님 안녕하세요
           <b-icon
-            icon="star-fill"
+            class="profile"
+            icon="heart-fill"
             animation="fade"
             font-scale="1"
-            style="margin-left: 10px"
           ></b-icon>
         </h6>
         <v-menu left bottom>
@@ -59,7 +50,7 @@
         </v-menu>
       </v-app-bar>
 
-      <v-main class="main">
+      <v-main class="main" style="background-color: #da0037">
         <div style="margin: 20px">
           <v-row>
             <v-col cols="2" class="absolute1" style="width: 200px">
@@ -182,21 +173,11 @@ export default {
   background-color: grey;
 }
 .ssafit {
-  background-image: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    navy,
-    purple
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-
+  text-decoration: none;
+  color: black;
+  margin: 20px 20px;
+  padding-top: 30px;
   font-weight: bold;
-  font-size: 40px;
 
   font-size: 25px;
 }
@@ -208,8 +189,22 @@ export default {
   color: white;
   font-size: 20px;
 }
-.run:hover {
-  transform: translateX(300px) scale(0.8, 1);
-  transition-duration: 2s;
+.v-sheet.rounded-lg {
+  background-color: #ededed;
+}
+.v-toolbar__content {
+  height: 10%;
+}
+.card {
+  background-color: black;
+}
+.mt-3 {
+  margin-top: 50px;
+  padding-top: 20px;
+}
+.v-btn--icon {
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 </style>
