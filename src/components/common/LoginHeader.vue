@@ -2,7 +2,9 @@
   <v-app>
     <div>
       <v-app-bar flat style="background-color: #da0037">
-        <a href="/" class="ssafit"> &nbsp;SSAFIT &nbsp; </a>
+        <a href="/" class="ssafit" style="font-family: KickerTrialBlack">
+          &nbsp;SSAFIT &nbsp;
+        </a>
         <v-spacer></v-spacer>
         <h6 class="mt-3">
           {{ userinfo.nickname }}님 안녕하세요
