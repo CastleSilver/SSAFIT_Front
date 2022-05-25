@@ -1,18 +1,14 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar app color="white" flat>
+      <v-app-bar app flat style="background-color: #c20000">
         <a href="/" class="ssafit"> &nbsp;SSAFIT &nbsp;</a>
-        <img
-          style="width: 55px"
-          class="run"
-          src="https://img.icons8.com/stickers/100/000000/exercise-skin-type-1.png"
-        />
+
         <v-spacer></v-spacer>
-        <v-btn to="/user/login" color="grey" class="login"> Log In </v-btn>
+        <v-btn to="/user/login" color="black" class="login"> Log In </v-btn>
       </v-app-bar>
 
-      <v-main class="main">
+      <v-main class="main" style="background-color: #c20000">
         <div style="margin: 20px">
           <v-row>
             <v-col cols="2" class="absolute1" style="width: 200px">
@@ -107,21 +103,11 @@ export default {
   background-color: grey;
 }
 .ssafit {
-  background-image: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    navy,
-    purple
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-
+  text-decoration: none;
+  color: black;
+  margin: 20px 20px;
+  padding-top: 30px;
   font-weight: bold;
-  font-size: 40px;
 
   font-size: 25px;
 }
@@ -130,11 +116,8 @@ export default {
   text-decoration: none;
 }
 .login {
+  margin-top: 25px;
   color: white;
   font-size: 20px;
-}
-.run:hover {
-  transform: translateX(300px) scale(0.8, 1);
-  transition-duration: 2s;
 }
 </style>
