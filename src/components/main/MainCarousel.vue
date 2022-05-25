@@ -1,7 +1,12 @@
 <template>
-   <div class="container">
+  <div class="container">
     <!-- <div>MainCarousel</div> -->
-    <h4>추천 영상</h4>
+    <h4 style="margin: 50px 0px">
+      <img
+        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-recommended-dating-app-flaticons-lineal-color-flat-icons.png"
+      />
+      추천 영상
+    </h4>
     <v-carousel height="auto" hide-delimiters>
       <template v-for="(photo, index) in recommend">
         <v-carousel-item

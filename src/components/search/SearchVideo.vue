@@ -3,8 +3,12 @@
 <template>
   <div class="container">
     <!-- 검색창 -->
-    <form @submit.prevent>
+    <form @submit.prevent style="margin: 50px 0px">
+      <img
+        src="https://img.icons8.com/external-bearicons-outline-color-bearicons/64/000000/external-Search-valentine-love-bearicons-outline-color-bearicons.png"
+      />
       <input
+        style="border: 1px solid black; border-radius: 5px; height: 30px"
         class="view"
         type="text"
         :value="keyword"

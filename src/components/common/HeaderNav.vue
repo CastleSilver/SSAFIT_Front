@@ -1,11 +1,13 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar app flat style="background-color: #da0037">
-        <a href="/" class="ssafit" style="font-family: KickerTrialBlack"> SSAFIT &nbsp;</a>
-
-        <v-spacer></v-spacer>
-        <v-btn to="/user/login" color="black" class="login"> Log In </v-btn>
+      <v-app-bar app flat style="height: 100px; background-color: #da0037">
+        <div class="headerbar">
+          <a href="/" class="ssafit" style="font-family: KickerTrialBlack">
+            SSAFIT &nbsp;</a
+          >
+          <v-btn to="/user/login" color="black" class="login"> Log In </v-btn>
+        </div>
         <div>
           <button @click="hamburgerMenu" class="hamburgerBtn">
             <font-awesome-icon icon="fa-solid fa-bars" class="hamburger" />
@@ -13,8 +15,32 @@
         </div>
       </v-app-bar>
 
+      <div
+        class="tm-hero d-flex justify-content-center align-items-center"
+        id="tm-video-container"
+        style="margin-top: 100px; background-color: #da0037"
+      >
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+        <video autoplay muted loop id="tm-video" height="300px">
+          <source :src="require('@/assets/video/video.mp4')" type="video/mp4" />
+        </video>
+        <video autoplay muted loop id="tm-video" height="300px">
+          <source
+            :src="require('@/assets/video/video1.mp4')"
+            type="video/mp4"
+          />
+        </video>
+        <video autoplay muted loop id="tm-video" height="300px">
+          <source
+            :src="require('@/assets/video/video2.mp4')"
+            type="video/mp4"
+          />
+        </video>
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+      </div>
+
       <v-main class="main" style="background-color: #da0037">
-         <v-row class="main-divider">
+        <v-row class="main-divider">
           <div :class="[{ leftMenu: true }, { hide: isClosed }]">
             <v-sheet rounded="lg" class="leftBar">
               <v-list color="transparent">
@@ -51,7 +77,7 @@
               </v-list>
             </v-sheet>
           </div>
-            <div :class="[{ rightMain: true }, { paddingRightMain: !isClosed }]">
+          <div :class="[{ rightMain: true }, { paddingRightMain: !isClosed }]">
             <v-sheet min-height="100vh" rounded="lg">
               <router-view />
             </v-sheet>
@@ -92,8 +118,8 @@ export default {
     ],
   }),
   methods: {
-  hamburgerMenu() {
-    this.isClosed = !this.isClosed;
+    hamburgerMenu() {
+      this.isClosed = !this.isClosed;
     },
   },
 };
@@ -102,7 +128,7 @@ export default {
 /* 홈, 검색, 찜리스트, 시청기록 나타내는 왼쪽 메뉴바 */
 .leftMenu {
   position: fixed;
-   width: 200px;
+  width: 200px;
 }
 /* 컨텐츠 표시 오른쪽 메인 공간 */
 .rightMain {
@@ -112,21 +138,23 @@ export default {
 .leftBar {
   width: 180px;
 }
-.header {
+
+.headerbar {
+  height: 80px;
   display: flex;
   justify-content: space-between;
 }
+
 .main {
   background-color: grey;
 }
 .main-divider {
-  margin: 20px;
+  margin: 0px 20px;
 }
 .ssafit {
   text-decoration: none;
   color: black;
   margin: 20px 20px;
-  padding-top: 30px;
   font-weight: bolder;
 
   font-size: 60px;
@@ -136,7 +164,9 @@ export default {
   text-decoration: none;
 }
 .login {
-  margin-top: 25px;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-right: 30px;
   color: white;
   font-size: 20px;
 }
