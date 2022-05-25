@@ -86,4 +86,10 @@ a {
   color: black;
   text-decoration: none;
 }
+@media screen and (max-width: 768px) {
+  .form-findid {
+    width: 90%;
+    margin: auto;
+  }
+}
 </style>

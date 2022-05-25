@@ -14,7 +14,7 @@
               placeholder="비밀번호를 입력하세요."
               trim></b-form-input>
           </b-form-group>
-          <br/>
+          <br />
           <b-button
             class="w-100 btn btn-lg btn-outline-secondary editMember-btn"
             type="submit"
@@ -64,5 +64,11 @@ export default {
   color: black;
   text-decoration: none;
   font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  .form-editMember {
+    width: 80%;
+    margin: auto;
+  }
 }
 </style>

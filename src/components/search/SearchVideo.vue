@@ -1,7 +1,7 @@
 // 새로고침하면 목록 사라져버림
 
 <template>
-  <div>
+  <div class="container">
     <!-- 검색창 -->
     <form @submit.prevent>
       <input
@@ -87,7 +87,6 @@ export default {
     //검색
     search(keyword) {
       let add = [];
-      console.log(keyword);
       for (let video of this.videos) {
         if (video.title.toLowerCase().includes(keyword.toLowerCase())) {
           let { title, ...rest } = video;

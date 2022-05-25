@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div>MainCarousel</div>
+   <div class="container">
+    <!-- <div>MainCarousel</div> -->
     <h4>추천 영상</h4>
-    <v-carousel height="auto">
+    <v-carousel height="auto" hide-delimiters>
       <template v-for="(photo, index) in recommend">
         <v-carousel-item
           class="carouselContainer"
@@ -80,10 +80,7 @@ export default {
     getPhotos: function () {
       this.$store
         .dispatch("getRecommend")
-        .then(() => {
-          console.log("recommend");
-          console.log(this.recommend);
-        })
+        .then(() => {})
         .catch(() => {
           console.log("getRecommend err");
         });

@@ -31,7 +31,7 @@
               placeholder="이메일을 입력하세요."
               trim></b-form-input>
           </b-form-group>
-          <br/>
+          <br />
           <b-button
             class="w-100 btn btn-lg btn-outline-secondary login-btn"
             type="submit"
@@ -98,5 +98,11 @@ export default {
 a {
   color: black;
   text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .form-login {
+    width: 90%;
+    margin: auto;
+  }
 }
 </style>
