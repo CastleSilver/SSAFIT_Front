@@ -18,6 +18,12 @@
       />
       <input class="btn" type="button" value="검색" />
     </form>
+    <button
+        @click="sortView"
+        class="partBtn"
+      >
+        조회수 순
+    </button>
     <!-- 영상 목록 -->
     <div class="cardContainer">
       <span
@@ -102,6 +108,19 @@ export default {
       add.push({}, {}, {});
       this.result = add;
     },
+    //조회수 순 정렬
+    sortView() {
+      console.log("정렬")
+      let add = [];
+      for (let video of this.videos) {
+        let { title, ...rest } = video;
+        add.push({ title, ...rest });
+      }
+      add.sort(function(a, b) {
+          return b.viewCnt - a.viewCnt;
+        });
+      this.result = add;
+    },
     textLengthOverCut(txt, len, lastTxt) {
       if (len == "" || len == null) {
         // 기본값
@@ -126,6 +145,24 @@ export default {
 </script>
 
 <style>
+.partBtn {
+  margin: 10px 10px;
+  position: relative;
+  border: none;
+  display: inline-block;
+  min-width: 110px;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
 .notCard {
   max-width: 370px;
   flex-grow: 1;
