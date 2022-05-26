@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import SearchVideo from "@/components/search/SearchVideo copy.vue";
+import SearchVideo from "@/components/search/SearchVideo.vue";
 
 export default {
   components: {
