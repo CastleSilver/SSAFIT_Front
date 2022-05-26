@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar app flat style="height: 120px; background-color: #da0037">
+      <v-app-bar app flat style="height: 100px; background-color: #da0037">
         <div class="headerbar">
           <a href="/" class="ssafit" style="font-family: KickerTrialBlack">
             SSAFIT &nbsp;</a
@@ -14,71 +14,23 @@
           </button>
         </div>
       </v-app-bar>
-      <!--왼쪽상단바-->
-      <div :class="[{ leftMenu: true }, { hide: isClosed }]">
-        <v-sheet
-          rounded="lg"
-          class="leftBar"
-          style="margin-top: 120px; margin-left: 20px"
-        >
-          <v-list color="transparent">
-            <v-list-item
-              v-for="(link, idx) in links"
-              :key="idx + 'I'"
-              :to="{ path: link.router }"
-              class="router"
-              link
-            >
-              <v-list-item-icon>
-                <img :src="`${link.icon}`" style="width: 40px" />
-              </v-list-item-icon>
-              <v-list-item-content>
-                {{ link.title }}
-              </v-list-item-content>
-            </v-list-item>
 
-            <v-divider class="my-2"></v-divider>
-            <v-list-item
-              v-for="(link, idx) in links2"
-              :key="idx + 'R'"
-              :to="{ path: link.router }"
-              class="router"
-              link
-            >
-              <v-list-item-icon>
-                <img :src="`${link.icon}`" style="width: 40px" />
-              </v-list-item-icon>
-              <v-list-item-content>
-                {{ link.title }}
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-sheet>
-      </div>
-      <!--영상출력부분-->
       <div
-        class="tm-hero d-flex justify-content-right align-items-left"
+        class="tm-hero d-flex justify-content-center align-items-center"
         id="tm-video-container"
-        style="margin-top: 120px; background-color: #da0037"
+        style="margin-top: 100px; background-color: #da0037"
       >
-        <video width="220px"></video>
-        <video
-          autoplay
-          muted
-          loop
-          id="tm-video"
-          height="320px"
-          style="padding-left: 20px"
-        >
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+        <video autoplay muted loop id="tm-video" height="300px">
           <source :src="require('@/assets/video/video.mp4')" type="video/mp4" />
         </video>
-        <video autoplay muted loop id="tm-video" height="320px">
+        <video autoplay muted loop id="tm-video" height="300px">
           <source
             :src="require('@/assets/video/video1.mp4')"
             type="video/mp4"
           />
         </video>
-        <video autoplay muted loop id="tm-video" height="320px">
+        <video autoplay muted loop id="tm-video" height="300px">
           <source
             :src="require('@/assets/video/video2.mp4')"
             type="video/mp4"
@@ -89,7 +41,7 @@
 
       <v-main class="main" style="background-color: #da0037">
         <v-row class="main-divider">
-          <!-- <div :class="[{ leftMenu: true }, { hide: isClosed }]">
+          <div :class="[{ leftMenu: true }, { hide: isClosed }]">
             <v-sheet rounded="lg" class="leftBar">
               <v-list color="transparent">
                 <v-list-item
@@ -124,10 +76,9 @@
                 </v-list-item>
               </v-list>
             </v-sheet>
-          </div> -->
-
+          </div>
           <div :class="[{ rightMain: true }, { paddingRightMain: !isClosed }]">
-            <v-sheet min-height="120vh" rounded="lg">
+            <v-sheet min-height="100vh" rounded="lg">
               <router-view />
             </v-sheet>
           </div>
@@ -175,7 +126,6 @@ export default {
 </script>
 <style scoped>
 /* 홈, 검색, 찜리스트, 시청기록 나타내는 왼쪽 메뉴바 */
-
 .leftMenu {
   position: fixed;
   width: 200px;
