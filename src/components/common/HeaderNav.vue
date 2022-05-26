@@ -14,7 +14,7 @@
           </button>
         </div>
       </v-app-bar>
-
+      <!--비디오 영상 출력 -->
       <div
         class="tm-hero d-flex justify-content-center align-items-center"
         id="tm-video-container"
@@ -156,7 +156,6 @@ export default {
   color: black;
   margin: 20px 20px;
   font-weight: bolder;
-
   font-size: 60px;
 }
 .router {

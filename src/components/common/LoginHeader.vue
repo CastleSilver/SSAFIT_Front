@@ -1,8 +1,12 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar flat style="background-color: #da0037">
-        <a href="/" class="ssafit" style="font-family: KickerTrialBlack">
+      <v-app-bar app flat style="height: 100px; background-color: #da0037">
+        <a
+          href="/"
+          class="ssafit"
+          style="font-family: KickerTrialBlack; margin-top: 40px"
+        >
           SSAFIT &nbsp;
         </a>
         <v-spacer></v-spacer>
@@ -52,13 +56,38 @@
             </v-list-item>
           </v-list>
         </v-menu>
-         <!-- 반응형 : 햄버거 버튼 -->
+        <!-- 반응형 : 햄버거 버튼 -->
         <div>
           <button @click="hamburgerMenu">
             <font-awesome-icon icon="fa-solid fa-bars" class="hamburger" />
           </button>
         </div>
       </v-app-bar>
+
+      <!--비디오 영상 출력 -->
+      <div
+        class="tm-hero d-flex justify-content-center align-items-center"
+        id="tm-video-container"
+        style="margin-top: 100px; background-color: #da0037"
+      >
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+        <video autoplay muted loop id="tm-video" height="300px">
+          <source :src="require('@/assets/video/video.mp4')" type="video/mp4" />
+        </video>
+        <video autoplay muted loop id="tm-video" height="300px">
+          <source
+            :src="require('@/assets/video/video1.mp4')"
+            type="video/mp4"
+          />
+        </video>
+        <video autoplay muted loop id="tm-video" height="300px">
+          <source
+            :src="require('@/assets/video/video2.mp4')"
+            type="video/mp4"
+          />
+        </video>
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+      </div>
 
       <v-main class="main" style="background-color: #da0037">
         <v-row class="main-divider">
@@ -84,7 +113,7 @@
                 </v-list-item>
                 <v-divider class="my-2"></v-divider>
 
-                  <v-list-item
+                <v-list-item
                   v-for="(link, idx) in links2"
                   :key="idx + 'R'"
                   :to="{ path: link.router }"
@@ -102,7 +131,7 @@
             </v-sheet>
           </div>
 
-            <!-- 컨텐츠 표시 오른쪽 메인 공간 -->
+          <!-- 컨텐츠 표시 오른쪽 메인 공간 -->
           <div :class="[{ rightMain: true }, { paddingRightMain: !isClosed }]">
             <v-sheet min-height="100vh" rounded="lg">
               <router-view />
@@ -190,6 +219,7 @@ export default {
 .leftBar {
   width: 180px;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -198,7 +228,7 @@ export default {
   background-color: grey;
 }
 .main-divider {
-  margin: 20px;
+  margin: 0px 20px;
 }
 .ssafit {
   text-decoration: none;
@@ -213,27 +243,19 @@ export default {
   color: black;
   text-decoration: none;
 }
-.login {
-  color: white;
-  font-size: 20px;
-}
+
 .v-sheet.rounded-lg {
   background-color: #ededed;
 }
-.v-toolbar__content {
-  height: 10%;
-}
-.card {
-  background-color: black;
-}
+
 .mt-3 {
   margin-top: 50px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .v-btn--icon {
-  margin-top: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 /* 햄버거 버튼 숨겨 */
 .hamburger {
@@ -307,6 +329,9 @@ export default {
   }
   .v-list > a {
     text-align: center;
+  }
+  .hamburgerBtn {
+    margin: 0px 15px;
   }
 }
 </style>
