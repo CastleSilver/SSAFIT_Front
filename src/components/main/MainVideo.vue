@@ -61,7 +61,7 @@ export default {
   transition: 0.25s;
 
   background-color: rgb(255, 255, 255);
-  color: #1e6b7b;
+  color: black;
 }
 .partBtn:hover {
   letter-spacing: 2px;
